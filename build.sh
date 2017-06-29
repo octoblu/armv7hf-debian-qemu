@@ -1,3 +1,7 @@
 #!/bin/bash
 
-go build -ldflags "-w -s" resin-xbuild.go
+env GOOS=linux \
+  go build \
+  -o ./bin/resin-xbuild \
+  -ldflags "-w -s" \
+  resin-xbuild.go
